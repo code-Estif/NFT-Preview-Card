@@ -41,8 +41,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/code-Estif/NFT-Preview-Card/settings/pages](https://your-solution-url.com)
+- Live Site URL: [ https://code-estif.github.io/NFT-Preview-Card/](https://your-live-site-url.com)
 
 ## My process
 
