@@ -1,41 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NFT Preview Card</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | NFT preview card component</title>
 </head>
 <body>
-  <main class="main-container">
-    <article class="card">
-      <figure class="card-image">
-        <img src="images/image-equilibrium.jpg" alt="Equilibrium cube" />
-      </figure>
-
-      <header class="card-header">
-        <h1 class="card-title">Equilibrium #3429</h1>
-        <p class="card-description">Our Equilibrium collection promotes balance and calm.</p>
-      </header>
-
-      <section class="card-details">
-        <p class="card-price">
-          <span class="icon"><img src="images/icon-ethereum.svg" alt="icon-ethereum" /></span>
-          <strong>0.041 ETH</strong>
-        </p>
-        <p class="card-time">
-          <span class="icon"><img src="images/icon-clock.svg" alt="icon-clock" /></span>
-          3 days left
-        </p>
-      </section>
-      <hr>
-      <footer class="card-footer">
-        <p class="creator-info">
-          <img class="avatar" src="images/image-avatar.png" alt="Jules Wyvern avatar" />
-          Creation of <strong class="creator-name">Jules Wyvern</strong>
-        </p>
-      </footer>
-    </article>
-  </main>
+<main>
+  <article class="container">
+    <div class="image">
+      <img src="images/image-equilibrium.jpg" alt="equilibrium">
+    </div>
+    <div class="content">
+      <h1>Equilibrium #3429</h1>
+      <p>Our Equilibrium collection promotes balance and calm.</p>
+      <div class="row">
+        <div class="ethereum">
+          <img src="images/icon-ethereum.svg" alt="ethereum">
+          <span>0.041 ETH</span>
+        </div>
+        <div class="clock">
+          <img src="images/icon-clock.svg" alt="clock">
+          <span>3 days left</span>
+        </div>
+      </div>
+      <div class="creation">
+        <img src="images/image-avatar.png" alt="avatar">
+        <p><span>Creation of</span>  Jules Wyvern</p>
+      </div>
+    </div>
+  </article>
+</main>
+  </div>
 </body>
 </html>

@@ -1,95 +1,166 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root{
+    /* primary */
+    --blue500:  hsl(215, 51%, 70%);
+    --cyan400:  hsl(178, 100%, 50%);
+    /* neutral */
+    --blue950:  hsl(217, 54%, 11%);/* bg done */
+    --blue900:  hsl(216, 50%, 16%);/* card done */
+    --blue800:  hsl(215, 32%, 27%);/* line */
+    --white:    hsl(0, 0%, 100%);
 }
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body{
-    background-color:  hsl(217, 54%, 11%);
+    font-family: "Outfit", sans-serif;
+    background: var(--blue950);
+    color: var(--white);
+}
+
+main{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 130vh;
+    min-height: 100vh;
+    padding: 1rem;
 }
-.main-container{
-    font-family: sans-serif;
+
+.container{
+    min-width: 260px;
+    padding: 1.5rem;
+    background: var(--blue900);
+    border-radius: 1rem;
 }
-.card{
-    width: 278px;
-    height: 480px;
-    border-radius: 9px;
-    background-color: hsl(216, 38%, 15%);
+
+.image{
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.image img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    display: block;
+}
+
+.image::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background: hsl(178, 100%, 50% , 0.5);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.image::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background: url(images/icon-view.svg) no-repeat center;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.image:hover::after,
+.image:hover::before{
+    opacity: 1;
+}
+
+.content h1{
+    font-size: 24px;
+    margin-top: 1.4rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.content h1:hover,
+.content .creation p:hover{
+    color: var(--cyan400);
+    cursor: pointer;
+}
+
+.content > p {
+    font-size: 17px;
+    line-height: 1.5;
+    margin: 0.85rem 0;
+    color: var(--blue500);
+    font-weight: 300;
+}
+
+.content .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--blue800);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.content .row .ethereum,
+.content .row .clock
+{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.content .row .ethereum span{
+    color: var(--cyan400);
+}
+
+
+.content .row .clock span{
+    color: var(--blue500);
+}
+
+.content .creation{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 300;
+}
+
+.creation img{
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    object-fit: cover;
+    width: 36px;
+    height: 36px;
+}
+
+.content .creation p{
+    transition: 0.3s;
+}
+
+.content .creation span{
+    color: var(--blue500);
+}
+
+
+@media (min-width:768px){
+    .container{
+    max-width: 350px;
+}
+.content h1{
+    font-size: 22px;
+}
+.content > p {
+    font-size: 18px;
 
 }
-.card-image img{
-    display: block;
-    margin: 0 auto;
-    width: 88%;
-    height: 17rem;
-    padding-top: 15px;
-    border-radius: 7px;
-}
-.card-title{
-    color: white;
-    margin-top: 0.8rem;
-    margin-left: 0.8rem;
-    opacity: 0.8;
-    font-size: 1.3rem;
-    font-family: sans-serif;
-    margin-bottom: 0.9rem;
-}
-.card-description{
-    color: white;
-    opacity: 0.5;
-    margin-left: 0.8rem;
-    margin-right: 19px;
-    margin-bottom: 0.8rem;
-}
-.card-details{
-    display: flex;
-    justify-content: space-around;
-    gap: 3rem;
-}
-.card-price{
-    opacity: 0.7;
-    font-size: 700;
-    color:  hsl(178, 100%, 50%);
-}
-hr{
-    opacity: 0.1;
-    width: 90%;
-    display: block;
-    margin: 0 auto;
-    margin-top: 0.8rem;
-    margin-bottom: 0.9rem;
-}
-.card-time{
-    color: white;
-    opacity: 0.9;
-}
-.card-footer{
-    margin-top: 0.2rem;
-    margin-left: 0.8rem;
-}
-.avatar{
-    width: 34px;
-    height: 35px;
-}
-.creator-info{
-    color: white;
-    opacity: 0.7;
-}
-.creator-name{
-    color: white;
-}
-@media (max-width:375px) {
-    body{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
-    .card{
-        margin: 0 auto;
-        width: 85%;
-    }
+
 }
